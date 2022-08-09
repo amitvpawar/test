@@ -1,0 +1,9 @@
+---
+- name: remove Directry
+  hosts: all
+  tasks:
+          - name: creating directory
+            file:
+                    name: amit
+                    state: absent
+~                                  
