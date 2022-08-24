@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Git') {
-      steps {
-        git(branch: 'main', url: 'https://github.com/amitvpawar/test.git')
+      parallel {
+        stage('Git') {
+          steps {
+            git(branch: 'main', url: 'https://github.com/amitvpawar/test.git')
+          }
+        }
+
+        stage('Create Dir') {
+          steps {
+            sh 'mkdir Ansible'
+          }
+        }
+
       }
     }
 
