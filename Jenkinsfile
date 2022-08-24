@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('SCM') {
+    stage('Shell') {
       steps {
         sh 'echo "welcome to the pipeline job"'
       }
