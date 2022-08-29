@@ -4,5 +4,5 @@
   tasks:
           - name: creating directory
             file:
-                    name: amit
+                    path: amit
                     state: absent
