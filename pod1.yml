@@ -1,0 +1,10 @@
+Kind: pod
+apiVersion: v1
+metadata:
+  name: testpod
+spec:
+  containers:
+    - name: c01
+      image: ubuntu
+      command: ["/bin/bash", "echo Welcome", "sleep 10"]
+   reatartPolicy: never
